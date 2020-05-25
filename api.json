@@ -1,0 +1,1063 @@
+[
+  {
+    "index": 0,
+    "name": "公共分类",
+    "desc": "公共分类",
+    "add_time": 1587978402,
+    "up_time": 1587978402,
+    "list": [
+      {
+        "query_path": {
+          "path": "/lol/dashboard/condition",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71230,
+        "method": "POST",
+        "catid": 12380,
+        "title": "筛选条件",
+        "path": "/lol/dashboard/condition",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 1065,
+        "add_time": 1588427634,
+        "up_time": 1588941713,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb553912e416121283b34bf",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"activityList\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"activityName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@string(0,4)\"}},\"activityId\":{\"type\":\"integer\",\"mock\":{\"mock\":\"@integer(0,10)\"}}},\"required\":[\"activityName\",\"activityId\"]}},\"institutionList\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"institutionName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@string(0,10)\"}},\"institutionId\":{\"type\":\"integer\",\"mock\":{\"mock\":\"@integer(0,10)\"}}},\"required\":[\"institutionName\",\"institutionId\"]}},\"gradeList\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"gradeName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@string(0,10)\"}},\"gradeId\":{\"type\":\"string\",\"mock\":{\"mock\":\"@integer(0,10)\"}}},\"required\":[\"gradeName\",\"gradeId\"]}},\"subjectList\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"subjectName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@string(0,10)\"}},\"subjectId\":{\"type\":\"string\",\"mock\":{\"mock\":\"@integer(0,10)\"}}},\"required\":[\"subjectName\",\"subjectId\"]}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json"
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "活动数据",
+    "desc": null,
+    "add_time": 1587982279,
+    "up_time": 1587982279,
+    "list": [
+      {
+        "query_path": {
+          "path": "/lol/dashboard/activity/PV",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71284,
+        "method": "POST",
+        "catid": 12383,
+        "title": "PV",
+        "path": "/lol/dashboard/activity/PV",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb413532e416121283b3441",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"date\":{\"type\":\"number\",\"mock\":{\"mock\":\"@date\"}},\"pv\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,100)\"}}}},\"minItems\":7,\"maxItems\":7},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588428641,
+        "up_time": 1588859731,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/activity/institution",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71239,
+        "method": "POST",
+        "catid": 12383,
+        "title": "TOP-N机构",
+        "path": "/lol/dashboard/activity/institution",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 1065,
+        "add_time": 1588427730,
+        "up_time": 1588858121,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb40d092e416121283b3436",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"institutionName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@string(1,8)\"}},\"newUser\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(1,1000)\"}},\"link\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(1,100)\"}},\"sale\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,100)\"}}}},\"minItems\":10,\"maxItems\":10},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/activity/UV",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71293,
+        "method": "POST",
+        "catid": 12383,
+        "title": "UV",
+        "path": "/lol/dashboard/activity/UV",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb50b042e416121283b347d",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"date\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,100)\"}},\"uv\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,100)\"}}}},\"minItems\":7,\"maxItems\":7},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588428679,
+        "up_time": 1588923140,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/activity/student/map",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71302,
+        "method": "POST",
+        "catid": 12383,
+        "title": "学员地图",
+        "path": "/lol/dashboard/activity/student/map",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb4a8792e416121283b3444",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"location\":{\"type\":\"string\"},\"count\":{\"type\":\"number\"}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588428720,
+        "up_time": 1588897913,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/activity/subject/percent",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71275,
+        "method": "POST",
+        "catid": 12383,
+        "title": "学科占比",
+        "path": "/lol/dashboard/activity/subject/percent",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb520322e416121283b34af",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"subjectId\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,100)\"}},\"subjectName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@string(0,10)\"}},\"percent\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,100)\"}}}},\"minItems\":5,\"maxItems\":10},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588428607,
+        "up_time": 1588928562,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/activity/grade/percent",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71266,
+        "method": "POST",
+        "catid": 12383,
+        "title": "年级占比",
+        "path": "/lol/dashboard/activity/grade/percent",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb520412e416121283b34b0",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"gradeId\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,100)\"}},\"gradeName\":{\"type\":\"string\",\"mock\":{\"mock\":\"@string(0,10)\"}},\"percent\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,100)\"}}}},\"minItems\":5,\"maxItems\":10},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588428330,
+        "up_time": 1588928577,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/activity/user/new",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71248,
+        "method": "POST",
+        "catid": 12383,
+        "title": "新增用户",
+        "path": "/lol/dashboard/activity/user/new",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb50b522e416121283b3480",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"date\":{\"type\":\"integer\",\"mock\":{\"mock\":\"@integer(0,100)\"}},\"newUserCount\":{\"type\":\"integer\",\"mock\":{\"mock\":\"@integer(0,100)\"}}}},\"minItems\":5,\"maxItems\":10},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588428144,
+        "up_time": 1588923218,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/activity/institution/sales",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71311,
+        "method": "POST",
+        "catid": 12383,
+        "title": "机构销售",
+        "path": "/lol/dashboard/activity/institution/sales",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb548372e416121283b34bc",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"pv\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,1000)\"}},\"uv\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,1000)\"}},\"breakPercent\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,1000)\"}},\"payingCount\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,1000)\"}},\"payingPercent\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,1000)\"}},\"sales\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,1000)\"}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588428799,
+        "up_time": 1588938807,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/activity/sales",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71257,
+        "method": "POST",
+        "catid": 12383,
+        "title": "销售额",
+        "path": "/lol/dashboard/activity/sales",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb50ea52e416121283b348f",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"date\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,100)\"}},\"sales\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer(0,100)\"}}}},\"minItems\":5,\"maxItems\":10},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588428322,
+        "up_time": 1588924069,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "直播数据",
+    "desc": null,
+    "add_time": 1587982291,
+    "up_time": 1587982291,
+    "list": [
+      {
+        "query_path": {
+          "path": "/lol/dashboard/live/break",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71374,
+        "method": "POST",
+        "catid": 12386,
+        "title": "中途退出",
+        "path": "/lol/dashboard/live/break",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb227542e416121283b330d",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"breakMinutes\":{\"type\":\"string\"},\"percent\":{\"type\":\"number\"}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588429341,
+        "up_time": 1588733780,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/live/interaction",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71365,
+        "method": "POST",
+        "catid": 12386,
+        "title": "互动类型",
+        "path": "/lol/dashboard/live/interaction",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb2274a2e416121283b330c",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"interactType\":{\"type\":\"string\"},\"percent\":{\"type\":\"number\"}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588429281,
+        "up_time": 1588733770,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/live/grade/subject",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71383,
+        "method": "POST",
+        "catid": 12386,
+        "title": "年级-学科直播数据",
+        "path": "/lol/dashboard/live/grade/subject",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb2275c2e416121283b330e",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"teacherCount\":{\"type\":\"number\"},\"subjectName\":{\"type\":\"string\"},\"classTime\":{\"type\":\"number\"},\"studentCount\":{\"type\":\"number\"}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588429482,
+        "up_time": 1588733788,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/live/grade",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71329,
+        "method": "POST",
+        "catid": 12386,
+        "title": "年级直播数据",
+        "path": "/lol/dashboard/live/grade",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb223f52e416121283b3301",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"grade\":{\"type\":\"string\"},\"teacherCount\":{\"type\":\"number\"},\"lessonCount\":{\"type\":\"number\"},\"studentCount\":{\"type\":\"number\"},\"attendancePercent\":{\"type\":\"number\"},\"finishPercent\":{\"type\":\"number\"}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588428933,
+        "up_time": 1588732917,
+        "__v": 0,
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}",
+        "req_body_type": "json"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/live/data",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71320,
+        "method": "POST",
+        "catid": 12386,
+        "title": "数据统计",
+        "path": "/lol/dashboard/live/data",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 1065,
+        "add_time": 1588428890,
+        "up_time": 1588732901,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb223e52e416121283b3300",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"teacherCount\":{\"type\":\"number\"},\"lessonCount\":{\"type\":\"number\"},\"signUpCount\":{\"type\":\"number\"},\"attendanceCount\":{\"type\":\"number\"},\"attendancePercent\":{\"type\":\"number\"},\"classTime\":{\"type\":\"number\"},\"finishPercent\":{\"type\":\"number\"}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/live/subject",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71356,
+        "method": "POST",
+        "catid": 12386,
+        "title": "直播内容",
+        "path": "/lol/dashboard/live/subject",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb227402e416121283b3309",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"subjectId\":{\"type\":\"number\"},\"subjectName\":{\"type\":\"string\"},\"percent\":{\"type\":\"number\"}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588429265,
+        "up_time": 1588733760,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/live/time",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71347,
+        "method": "POST",
+        "catid": 12386,
+        "title": "直播时长分析",
+        "path": "/lol/dashboard/live/time",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb227342e416121283b3308",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "uid": 1065,
+        "add_time": 1588429211,
+        "up_time": 1588733748,
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"date\":{\"type\":\"number\"},\"minutes\":{\"type\":\"number\"}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/live/join",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71338,
+        "method": "POST",
+        "catid": 12386,
+        "title": "课程参与人数",
+        "path": "/lol/dashboard/live/join",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 1065,
+        "add_time": 1588429201,
+        "up_time": 1588732926,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb223fe2e416121283b3302",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"number\"}}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "辅导老师数据",
+    "desc": null,
+    "add_time": 1587982301,
+    "up_time": 1587982301,
+    "list": [
+      {
+        "query_path": {
+          "path": "/lol/dashboard/teacher/break",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71428,
+        "method": "POST",
+        "catid": 12389,
+        "title": "中途退出",
+        "path": "/lol/dashboard/teacher/break",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb2278b2e416121283b3317",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\"},\"percent\":{\"type\":\"number\"}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588429794,
+        "up_time": 1588733835,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/teacher/join",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71410,
+        "method": "POST",
+        "catid": 12389,
+        "title": "参与人数",
+        "path": "/lol/dashboard/teacher/join",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb227752e416121283b3314",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"number\"}}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588429654,
+        "up_time": 1588733813,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/teacher/attendance",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71437,
+        "method": "POST",
+        "catid": 12389,
+        "title": "学员出勤率",
+        "path": "/lol/dashboard/teacher/attendance",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb227922e416121283b3318",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"date\":{\"type\":\"number\"},\"percent\":{\"type\":\"number\"}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588429822,
+        "up_time": 1588733842,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/teacher/finish",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71446,
+        "method": "POST",
+        "catid": 12389,
+        "title": "学员完课率",
+        "path": "/lol/dashboard/teacher/finish",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb228c42e416121283b3325",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"date\":{\"type\":\"number\"},\"percent\":{\"type\":\"number\"}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588429927,
+        "up_time": 1588734148,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/teacher/course/student",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71401,
+        "method": "POST",
+        "catid": 12389,
+        "title": "学员统计",
+        "path": "/lol/dashboard/teacher/course/student",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb2276d2e416121283b3310",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "uid": 1065,
+        "add_time": 1588429632,
+        "up_time": 1588733805,
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"courseName\":{\"type\":\"string\"},\"buyCount\":{\"type\":\"number\"},\"attendancePercent\":{\"type\":\"number\"},\"finishPercent\":{\"type\":\"number\"}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/teacher/data",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71392,
+        "method": "POST",
+        "catid": 12389,
+        "title": "数据统计",
+        "path": "/lol/dashboard/teacher/data",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 1065,
+        "add_time": 1588429629,
+        "up_time": 1588733798,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb227662e416121283b330f",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"buyCount\":{\"type\":\"number\"},\"inClassCount\":{\"type\":\"number\"},\"activeCount\":{\"type\":\"number\"},\"attendancePercent\":{\"type\":\"number\"},\"finishPercent\":{\"type\":\"number\"},\"interactPercent\":{\"type\":\"number\"}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/lol/dashboard/teacher/active",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 71419,
+        "method": "POST",
+        "catid": 12389,
+        "title": "活跃学员",
+        "path": "/lol/dashboard/teacher/active",
+        "project_id": 169,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5eb227812e416121283b3316",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\"},\"percent\":{\"type\":\"number\"}}}},\"timestamp\":{\"type\":\"number\"},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"failCode\":{\"type\":\"null\"},\"failMsg\":{\"type\":\"null\"},\"success\":{\"type\":\"boolean\"}}}",
+        "uid": 1065,
+        "add_time": 1588429749,
+        "up_time": 1588733825,
+        "__v": 0,
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"activity\":{\"type\":\"string\"},\"institution\":{\"type\":\"string\"},\"grade\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"start\":{\"type\":\"number\"},\"end\":{\"type\":\"number\"}}}",
+        "req_body_type": "json"
+      }
+    ]
+  }
+]
