@@ -1,0 +1,26 @@
+{
+  "name": "yapihelper",
+  "version": "1.0.0",
+  "description": "yapi helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cocoroise/yapiHelper.git"
+  },
+  "keywords": [
+    "yapi",
+    "node"
+  ],
+  "author": "cocoroise",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cocoroise/yapiHelper/issues"
+  },
+  "homepage": "https://github.com/cocoroise/yapiHelper#readme",
+  "devDependencies": {
+    "axios": "^0.19.2"
+  }
+}

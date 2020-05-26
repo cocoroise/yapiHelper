@@ -1,9 +1,10 @@
 const apiJson = require("./api.json");
+const config = require("./yapiHelper.config");
 const fs = require("fs");
 const path = require("path");
 
 // 当前执行目录 可自定义
-const pathIndex = path.resolve(__dirname+"/src");
+const pathIndex = path.resolve(__dirname + config.dirPath);
 
 // 文件名 --> 默认取倒数第二个分组,全小写
 // aaa/bbb/Cd/ddd ---> cd
@@ -24,6 +25,16 @@ const generateFileDec = (data) => {
   return `  // 接口分类名称：${name}`;
 };
 
+// TODO: 支持自定义导入http请求方法 比如axios或者request
+const generateServiceImport = (data) => {
+  const { name } = data[0];
+  const dirName = getFileName(data[0].url);
+  return ` // service名称：${name}
+  import Vue from "vue";
+  import ${dirName}Api from "../api/${dirName}";
+  `;
+};
+
 const filePreFix = () => {
   return `
   export default {`;
@@ -39,9 +50,32 @@ const generateApiFn = (data) => {
   return `
     // ${desc}
     ${apiName} : {
-        ${apiName}: "${url}",
+        url: "${url}",
         method: "${method}"
     },`;
+};
+
+const getMethodType = (method) => {
+  if (method.toLowerCase().includes("get")) {
+    return "data";
+  }
+  return "params";
+};
+
+const generateServiceFn = (data, dirName) => {
+  const { url, method, desc } = data;
+  const methodType = getMethodType(method);
+  const apiName = getApiName(url);
+
+  return `
+  // ${desc}
+  export function ${apiName}(${methodType}){
+    return ${config.http}({
+      ...${dirName}Api.${apiName},
+      ${methodType},
+    })
+  }
+  `;
 };
 
 // 生成驼峰写法
@@ -62,7 +96,7 @@ const writeFileRecursive = (path, buffer, callback) => {
   let lastPath = path.substring(0, path.lastIndexOf("/"));
   fs.mkdir(lastPath, { recursive: true }, (err) => {
     if (err) return callback(err);
-    if (fs.existsSync(path)) {
+    if (config.cover && fs.existsSync(path)) {
       console.log(`[ERROR]文件夹 ${path} 已存在`);
     } else {
       fs.writeFile(path, buffer, function (err) {
@@ -81,22 +115,47 @@ const mkApiFile = async (data) => {
     fileBuffer += generateApiFn(apiItem);
   });
   fileBuffer += fileLastFix();
-  await writeFileRecursive(`${pathIndex}/api/${dirName}.js`, fileBuffer, (err) => {
-    if (err) {
-      console.log("[ERROR]", err);
-    } else {
-      console.log(`[SUCCESS]创建文件 ${dirName} 成功`);
+  await writeFileRecursive(
+    `${pathIndex}/api/${dirName}.js`,
+    fileBuffer,
+    (err) => {
+      if (err) {
+        console.log("[ERROR]", err);
+      } else {
+        console.log(`[SUCCESS]创建api文件 ${dirName} 成功`);
+      }
     }
+  );
+};
+
+const mkServiceFile = async (data) => {
+  const dirName = getFileName(data[0].url);
+  let fileBuffer = generateServiceImport(data);
+  data.map((apiItem) => {
+    fileBuffer += generateServiceFn(apiItem, dirName);
+  });
+  await writeFileRecursive(
+    `${pathIndex}/services/${dirName}.js`,
+    fileBuffer,
+    (err) => {
+      if (err) {
+        console.log("[ERROR]", err);
+      } else {
+        console.log(`[SUCCESS]创建services文件 ${dirName} 成功`);
+      }
+    }
+  );
+};
+
+// 生成文件
+const generateFile = async (apiList) => {
+  await apiList.map((v) => {
+    mkApiFile(v);
+    mkServiceFile(v);
   });
 };
 
-// 生成api文件
-const generateApi = async (apiList) => {
-  await apiList.map((v) => mkApiFile(v));
-};
-
-const generateService = (data) => {};
-
+// 从json里取出需要的信息
 const apiList = apiJson.map((apiType) => {
   const { list } = apiType;
   let apiArray = [];
@@ -113,7 +172,4 @@ const apiList = apiJson.map((apiType) => {
   return apiArray;
 });
 
-// 生成api文件
-generateApi(apiList);
-// 生成services文件
-// apiList.map(v=>generateService(v));
+generateFile(apiList);

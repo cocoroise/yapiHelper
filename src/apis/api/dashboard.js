@@ -2,6 +2,6 @@
   export default {
     // 筛选条件
     dashboardCondition : {
-        dashboardCondition: "/lol/dashboard/condition",
+        url: "/lol/dashboard/condition",
         method: "POST"
     },}
