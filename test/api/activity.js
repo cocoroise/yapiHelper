@@ -44,4 +44,5 @@
     activitySales : {
         url: "/lol/dashboard/activity/sales",
         method: "POST"
+
     },}

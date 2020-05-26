@@ -4,7 +4,7 @@
   "description": "yapi helper",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "build": "node ./index.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/cocoroise/yapiHelper#readme",
   "devDependencies": {
-    "axios": "^0.19.2"
-  }
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "axios": "^0.19.2",
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {}
 }

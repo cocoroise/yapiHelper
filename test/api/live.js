@@ -39,4 +39,5 @@
     liveJoin : {
         url: "/lol/dashboard/live/join",
         method: "POST"
+
     },}

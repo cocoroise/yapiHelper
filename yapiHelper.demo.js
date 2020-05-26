@@ -3,8 +3,7 @@ const config = {
   token: "",
   id: "169", // 接口ID
   http: "axios",
-  dirPath: "/src/apis",
-  cover: true, // 覆盖已有文件夹
+  dirPath: "/test",
 };
 
 module.exports = config;

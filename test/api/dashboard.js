@@ -4,4 +4,5 @@
     dashboardCondition : {
         url: "/lol/dashboard/condition",
         method: "POST"
+
     },}
